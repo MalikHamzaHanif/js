@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Alert Prompt Confirm</h1>
+    <script>
+        alert("hi this is just a alert message");
+        const name=prompt("enter your name please");
+
+        const confirmName=prompt("enter your name again");
+        if(name==confirmName){
+           let confirmName= confirm(`are you sure we set your name to ${name}`);
+           if(confirmName){
+            alert("successfully name entered in our database")
+           }else{
+            alert("try again")
+           }
+        }else{
+            alert("both name must be similar")
+        }
+    </script>
+</body>
+</html>
