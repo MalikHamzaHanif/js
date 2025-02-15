@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing HTML classes</title>
+</head>
+
+<body>
+    <div class="bg-blue red green yellow w-2 flex ">
+        <p>i am p inside bg-blue</p>
+    </div>
+    <script>
+        const div = document.getElementsByClassName("bg-blue")[0];
+        console.log(div);
+        console.log(div.className);
+        console.log(div.classList);
+        div.className = "new-class bg-red"
+        console.log(div.className);
+
+        console.log(div.classList);
+        div.classList.add("bg-green")
+        console.log(div.className);
+        div.classList.remove("new-class")
+        console.log(div.className);
+        div.classList.toggle("new-class")
+        console.log(div.className);
+        div.classList.toggle("new-class")
+        console.log(div.className);
+
+
+    </script>
+</body>
+
+</html>
