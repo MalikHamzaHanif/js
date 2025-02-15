@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching the dom using js</title>
+</head>
+<body>
+        <div id="main">i am main div</div>
+        <div class="bg-blue">class bg-blue</div>
+        <div class="bg-blue" name="hamza">class bg-blue</div>
+        <p name="hamza">i am hamza</p>
+
+        <script>
+            console.log(document.getElementById("main"));
+            console.log(document.getElementsByClassName("bg-blue"));
+            console.log(document.getElementsByTagName("div"));
+            console.log(document.getElementsByName("hamza"));
+            console.log(document.querySelector(".bg-blue"));
+            console.log(document.querySelectorAll(".bg-blue"));
+            
+            
+            
+            
+            
+        </script>
+</body>
+</html>

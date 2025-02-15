@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Match Closest Contain</title>
+</head>
+
+<body>
+    <div id="great-grand-parent" class="bg-blue color-red flex w-2">
+        <div id="grand-parent">
+            <div id="parent">
+                <div id="child">
+                    <p>i am child</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        console.log(document.getElementById("child").closest("#great-grand-parent"));
+        console.log(document.getElementById("child").closest("#grand-parent"));
+        console.log(document.getElementById("child").closest("#parent"));
+        const nodeValueOne = document.getElementById("child").closest("#grand-parent");
+        console.log(document.getElementById("great-grand-parent").contains(nodeValueOne));
+        console.log(document.getElementById("great-grand-parent").matches(".bg-blue"));
+        console.log(document.getElementById("great-grand-parent").matches(".bg-green"));
+
+
+    </script>
+</body>
+
+</html>
