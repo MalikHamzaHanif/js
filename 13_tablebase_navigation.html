@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Base Navigation</title>
+</head>
+
+<body>
+    <div id="main">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone No</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hamza</td>
+                    <td>34</td>
+                    <td>01234</td>
+                </tr>
+                <tr>
+                    <td>Ali</td>
+                    <td>43</td>
+                    <td>99234</td>
+                </tr>
+                <tr>
+                    <td>Shahid</td>
+                    <td>24</td>
+                    <td>88884</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        const table = document.body.firstElementChild.firstElementChild;//first element child of body is div and divs first element child is table 
+        console.log(table);
+        console.log(table.tHead);
+        console.log(table.tBodies);
+        console.log(table.rows);
+        console.log(table.rows[1].cells);
+        console.log(table.rows[1].cells[0]);
+        console.log(table.rows[1].cells[0].style.border = "2px solid black");
+        console.log(table.rows[1].cells[0].innerHTML);
+        console.log(table.rows[1].cells[0].cellIndex);
+
+
+
+
+    </script>
+</body>
+
+</html>
