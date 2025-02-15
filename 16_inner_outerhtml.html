@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innderHTML outerHTML</title>
+</head>
+
+<body>
+    <div id="main">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Optio, magni!</p>
+    </div>
+    <script>
+        let p = document.getElementsByTagName("p")[0]
+        console.log(p.innerHTML);
+        console.log(p.nodeName);
+        console.log(p.innerText);
+        p.innerHTML = "inner text is changed once"
+        p.innerText = "inner text is changed twice"
+
+        // console.log(p.outerHTML);
+        // p.outerHTML="let change the outer html without adding any tag"
+        // console.log("------------");
+
+        // console.log(p.innerHTML);
+        // console.log(p.outerHTML);
+        // console.log("------------");
+
+        // console.log(document.getElementsByTagName("p")[0]);//p got removed b/c we have changed the outer html
+        p.outerHTML = "<p>i am p</p>"
+        console.log(document.getElementsByTagName("p")[0]);
+
+
+
+
+    </script>
+</body>
+
+</html>
