@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion methods</title>
+</head>
+
+<body>
+    <div id="main">
+        <p>i am a first child</p>
+    </div>
+
+    <div id="main-two">
+        <p>i am inside main-two</p>
+    </div>
+    <script>
+        const div = document.getElementById("main")
+        main.style.border = "2px solid red"
+        let paraOne = document.createElement("p")
+        paraOne.innerHTML = "outside the div";
+        // div.insertAdjacentElement("beforebegin",paraOne)
+        let paraTwo = document.createElement("p")
+        paraTwo.innerHTML = "inside the div but on top";
+        // div.insertAdjacentElement("afterbegin",paraTwo)
+        let paraThree = document.createElement("p")
+        paraThree.innerHTML = "last child of the div";
+        // div.insertAdjacentElement("beforeend",paraThree)
+        let paraFour = document.createElement("p")
+        paraFour.innerHTML = "last child of the divafter end means outside the div";
+        // div.insertAdjacentElement("afterend",paraFour)
+
+        const divTwo = document.getElementById("main-two");
+        divTwo.style.border = "2px solid green";
+        divTwo.appendChild(paraThree);
+        divTwo.prepend(paraTwo);
+        divTwo.before(paraOne);
+        divTwo.after(paraFour);
+    </script>
+</body>
+
+</html>
