@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes and methods</title>
+</head>
+<body>
+    <div class="bg-blue flex w-2"> <p>i am p</p></div>
+    <script>
+        const div=document.getElementsByClassName("flex")[0];
+
+        console.log(div);
+        console.log(div.getAttribute("class"));
+        console.log(div.hasAttribute("class"));
+        console.log(div.hasAttribute("id"));
+        div.setAttribute("id","main")
+        console.log(div.hasAttribute("id"));
+        div.removeAttribute("id")
+        console.log(div.hasAttribute("id"));
+        div.setAttribute("hidden","true")
+        console.log(div.getAttribute("hidden"));
+        div.removeAttribute("hidden")
+        console.log(div.getAttribute("hidden"));
+        
+        
+        
+        
+    </script>
+</body>
+</html>
