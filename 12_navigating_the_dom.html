@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigating The Dom</title>
+</head>
+
+<body>
+    <div id="nav-bar" class="navigtion-bar">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="navigtion-bar">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab iure dolores vitae non fugiat et autem quam nisi
+            itaque praesentium reprehenderit est suscipit veritatis nobis, temporibus ipsum, maiores, doloribus omnis.
+        </p>
+    </div>
+    <h1>Lorem, ipsum dolor.</h1>
+    <script>
+
+        console.log(document);
+        console.log(document.body);
+        console.log(document.title);
+        console.log(document.documentElement);
+        console.log(document.head);
+        console.log(document.head.firstElementChild);
+
+        document.getElementsByClassName("navigtion-bar")[0].style.backgroundColor = "red";
+        document.getElementsByClassName("navigtion-bar")[1].style.color = "red";
+
+        console.log(document.body.firstChild);
+        console.log(document.body.firstChild.firstChild);//give us null 
+        console.log(document.body.firstElementChild);
+        console.log(document.body.firstElementChild.firstElementChild);
+        console.log(document.body.firstElementChild.lastChild);
+        console.log(document.body.firstElementChild.lastElementChild);
+
+        console.log(document.body.firstElementChild.childNodes);
+        console.log(document.body.firstElementChild.children);
+
+        document.body.firstElementChild.childNodes.forEach(element => {
+            console.log(element);
+
+        })
+        // document.body.firstElementChild.children.array.forEach(element => {
+        //     console.log(element);
+
+        // }); children give us htmlcollection which has no forEach loop
+
+
+        Array.from(document.body.firstElementChild.children).forEach((e) => {
+            console.log(e);
+
+        })
+
+        console.log(document.body.firstElementChild.childNodes[0]);
+        console.log(document.body.firstElementChild.parentNode);
+        console.log(document.body.firstElementChild.parentElement);
+
+        console.log(document.body.firstElementChild.nextSibling);
+        console.log(document.body.firstElementChild.nextElementSibling);
+        console.log(document.body.lastElementChild.previousElementSibling);
+        console.log(document.body.lastElementChild.previousSibling);
+        document.body.lastElementChild.previousElementSibling.style.backgroundColor="blue";
+        
+        
+        
+        
+
+
+
+
+    </script>
+</body>
+
+</html>
