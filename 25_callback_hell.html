@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback hell in js</title>
+</head>
+
+<body>
+    <div>
+        <h1>Callback hell in js</h1>
+    </div>
+    <script>
+        function loadScript(src, callback) {
+            const script = document.createElement("script");
+            script.src = src;
+            document.body.appendChild(script);
+            script.onload = callback;
+        }
+
+        loadScript("./05_loops.js", () => {
+            console.log("script is injected successfully");
+
+            //say i want to inject one more script after injecting the first script like the condition is once
+            // first is injected then i will inject the second so
+
+            loadScript("./08_array.js", () => {
+                console.log("second script is injected successfully");
+                //now third
+
+                loadScript("./06_functions.js", () => {
+                    console.log("third script is injected successfully");
+                    loadScript("./08_array.js", () => {
+                        console.log("fourth script is injected successfully");
+
+                    })
+
+                })
+            })
+
+        });
+    </script>
+</body>
+
+</html>
