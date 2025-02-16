@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback in j/s</title>
+</head>
+
+<body>
+    <div>
+        <h1>Leraning callback in js</h1>
+    </div>
+    <script>
+        // script.src="xyz.com"
+
+        function loadScript(src, callback) {
+            const script = document.createElement("script");
+            script.src = src;
+            document.body.appendChild(script);
+            script.onload = () => {
+                callback();
+            };
+            script.onerror = (e) => {
+                console.log(e);
+
+            }
+        }
+        loadScript("./05_loops.js", () => {
+            console.log("script is injected succefully");
+
+
+        })
+
+
+    </script>
+</body>
+
+</html>
