@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse and keyboard events in js</title>
+</head>
+
+<body>
+    <h1>Mouse events</h1>
+    <button>click me</button>
+    <h1>keyboard events</h1>
+    <input type="text" placeholder="enter something here">
+    <script>
+
+        const btn = document.getElementsByTagName("button")[0];
+        btn.onclick = (e) => {
+            console.log("i am clicked");
+            console.log(e);
+
+
+
+        }
+
+        btn.onmousedown = (e) => {
+            console.log("mouse is down");
+
+
+        }
+
+        btn.onmouseenter = () => {
+            console.log("mouse entered");
+
+        }
+
+        btn.onmouseleave = () => {
+            console.log("mouse left");
+            // Triggers only when the mouse leaves the element itself, not when moving to a child element.
+            // Does not bubble up.
+            // If you move the mouse from a <div> to a child <p>, mouseleave won’t fire for the <div> (because the mouse is still inside it).
+
+        }
+
+        btn.onmouseout = () => {
+            console.log("mouse out");
+            // Triggers when the mouse moves out of an element or any of its child elements.
+            // Bubbles up(propagates) to parent elements.
+            // If you move the mouse from a <div> to a child <p> inside it, mouseout fires for the <div>.
+        }
+        btn.onmouseup = () => {
+            console.log("mouse is up");
+
+        }
+        btn.onmouseup = () => {
+            console.log("mouse is up");
+
+        }
+        console.log("-----------------------------------------------------------------------------------------");
+
+        const input = document.getElementsByTagName("input")[0];
+        input.onkeydown = (e) => {
+            console.log("key is down");
+
+            console.log(e.key);
+
+        }
+        input.onkeyup = (e) => {
+            console.log("key is up");
+            console.log(e.key);
+
+        }
+        input.onkeypress = (e) => {
+            console.log("key is pressed");
+            console.log(e.key);
+
+
+        }
+
+    </script>
+</body>
+
+</html>
