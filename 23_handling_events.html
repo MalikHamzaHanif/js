@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event handler</title>
+</head>
+
+<body>
+    <button>click</button>
+    <script>
+        const btn = document.getElementsByTagName("button")[0];
+        function printSomething(e) {
+            console.log("printing on click....");
+            console.log(e.target); //e.target is where the event started.
+            console.log(e.clientX);
+            console.log(e.clientY);
+            console.log(e.currentTarget); //e.currentTarget is where the event is currently being handled.
+            console.log(e.type);
+
+            btn.removeEventListener("click", printSomething);
+        }
+
+        btn.addEventListener("click", printSomething)
+
+        btn.onclick = (e) => {
+            console.log(e.target);
+
+        }
+
+
+
+        function myOwnLogic(argOne, argTwo) {
+            let x = "nothing";
+            console.log(typeof (argOne));
+            console.log(typeof (argTwo));
+
+            if (typeof (argTwo) != "function") {
+                console.log("not a valid arg");
+
+            } else {
+                argTwo(x)
+            }
+
+        }
+
+        myOwnLogic("hamza", (x) => {
+            console.log("hellow");
+            console.log(x);
+
+
+        })
+    </script>
+</body>
+
+</html>
