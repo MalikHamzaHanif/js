@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding the event propagation and event bubling</title>
+</head>
+
+<body>
+    <div id="main">
+        <div id="child">
+            <button id="btn">click me</button>
+        </div>
+    </div>
+    <script>
+        const main = document.getElementById("main");
+        const child = document.getElementById("child");
+        const btn = document.getElementById("btn");
+
+        main.onclick = () => {
+            console.log("main clicked");
+
+        }
+        child.onclick = (e) => {
+            console.log("child clicked");
+
+            e.stopPropagation();
+            //btn click then child and then stop
+        }
+        btn.onclick = (e) => {
+            console.log("btn clicked");
+            // e.stopPropagation(); will stop after btn click
+        }
+        //from child to parent . first btn then child then main
+
+
+    </script>
+</body>
+
+</html>
