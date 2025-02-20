@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cokies in js
+    </title>
+</head>
+
+<body>
+    <div>
+        <h1>Cokies</h1>
+    </div>
+    <script>
+        document.cookie="name=hamza ";
+        document.cookie="nametwo=ali ";
+        // document.cookie=`namethree= ${encodeURIComponent("ali rehman khan")} ; path=/; expires=Tue,29 Feb 2025`
+        document.cookie=`namethree= ${encodeURIComponent("ali rehman khan")} ; path=/; expires=Tue,20 Feb 2025 00:00:00 GMT`
+        let cokies=document.cookie
+        document.getElementsByTagName("h1")[0].innerHTML=decodeURIComponent(cokies);
+    </script>
+</body>
+
+</html>
