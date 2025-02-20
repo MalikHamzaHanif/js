@@ -47,7 +47,7 @@ async function getData() {
     try {
         const data = await fetch("https://jsonplaceholder.typicode.com/todos");
         const todo = await data.json();
-        // console.log(todo);
+        console.log(todo);
         return todo;
     } catch (e) {
         console.log(e);
@@ -57,14 +57,19 @@ async function getData() {
 
 }
 
+// getData()
 
 
+function getDataTwo() {
+   return fetch("https://jsonplaceholder.typicode.com/todos");
+   //returning promise
+}
 
-// fetch("https://jsonplaceholder.typicode.com/todos").then((data) => {
-//     return data.json()
-// }).then((data) => {
-//     console.log(data);
-
-// }).catch((e) => {
-//     console.log(e);
-// })
+getDataTwo().then((data)=>{
+    // console.log(data);
+    return data.json()
+    //returning another promise
+}).then((data)=>{
+    console.log(data);
+    
+})
