@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind keyword</title>
+</head>
+
+<body>
+    <div>Bind</div>
+    <button>click me</button>
+    <script>
+        class Data {
+            constructor() {
+                this.server = "https://localhost:5000";
+                this.user = "anyone";
+                document.getElementsByTagName('button')[0].addEventListener('click', this.handleEvent.bind(this));
+            }
+
+            handleEvent() {
+                console.log("event got handled");
+                console.log(this.server);
+
+
+            }
+        }
+
+        const user = new Data();
+
+    </script>
+</body>
+
+</html>

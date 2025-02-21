@@ -28,12 +28,12 @@
 // }
 // ........................................................................................
 
-function getUser(name,age,id){
-    this.name=name;
-    this.age=age;
-    this.id=id;
+function getUser(name, age, id) {
+    this.name = name;
+    this.age = age;
+    this.id = id;
     // console.log(this);
-    
+
     return this
 }
 
@@ -41,12 +41,12 @@ function getUser(name,age,id){
 // getUser('hamza',23,455555)
 
 
-let userOne={
-name:"ali",
-getUser:function(){
-    console.log(this);
-    
-}
+let userOne = {
+    name: "ali",
+    getUser: function () {
+        console.log(this);
+
+    }
 }
 // userOne.getUser()
 
@@ -57,9 +57,9 @@ getUser:function(){
 // let userNoTwo=getUser("hamza",78,788)
 // console.log(userNoTwo);
 // console.log(userNoOne);
-let userNoOne=new getUser("ali",45,67777)
+let userNoOne = new getUser("ali", 45, 67777)
 console.log(userNoOne);
-let userNoTwo=new getUser("hamza",78,788)
+let userNoTwo = new getUser("hamza", 78, 788)
 console.log(userNoTwo);
 console.log(userNoOne);
 
@@ -69,14 +69,14 @@ console.log(userNoOne);
 
 
 // ........................................................................................
-// console.log(this); 
+// console.log(this);
 // // Output: `window` (global object in browsers)
-// console.log(this); 
+// console.log(this);
 // // Output: `{}` (empty object in modules)
 // function showThis() {
 //     console.log(this);
 // }
-// showThis(); 
+// showThis();
 // // In browsers: `window`
 // // In Node.js: `global`
 // let user = {
@@ -85,7 +85,7 @@ console.log(userNoOne);
 //         console.log(this.name);
 //     }
 // };
-// user.greet(); 
+// user.greet();
 // // Output: "Hamza"
 // let user = {
 //     name: "Hamza",
@@ -93,7 +93,7 @@ console.log(userNoOne);
 //         console.log(this.name);
 //     }
 // };
-// user.greet(); 
+// user.greet();
 // // Output: `undefined` (because `this` is not `user`, but the global object)
 // let user = {
 //     name: "Hamza",
@@ -104,7 +104,7 @@ console.log(userNoOne);
 //         innerFunction();
 //     }
 // };
-// user.greet();  
+// user.greet();
 // // Output: `window` (or `undefined` in strict mode)
 // let user = {
 //     name: "Hamza",
@@ -115,7 +115,7 @@ console.log(userNoOne);
 //         innerFunction();
 //     }
 // };
-// user.greet();  
+// user.greet();
 // // Output: "Hamza"
 // let person = { name: "Ali" };
 
@@ -125,7 +125,7 @@ console.log(userNoOne);
 
 // sayHello.call(person); // Output: "Hello, Ali"
 // let boundFunction = sayHello.bind(person);
-// boundFunction(); 
+// boundFunction();
 // // Output: "Hello, Ali"
 // class Person {
 //     constructor(name) {
@@ -138,6 +138,6 @@ console.log(userNoOne);
 // }
 
 // let p = new Person("Hamza");
-// p.sayName();  
+// p.sayName();
 // // Output: "Hamza"
 
