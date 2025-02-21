@@ -4,8 +4,8 @@ this.username=username;
 
 
 function getUserData(username,age,id){
-    // setUserName(username);
-    setUserName.call(this,username);
+    // setUserName(username); //we will not get username in our getuserdata with this b/c aftere execution its context get removed
+    setUserName.call(this,username); //to hold the referense 
     this.age=age;
 
     this.id=id;
