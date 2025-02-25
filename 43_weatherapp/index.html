@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="first">
+            <input type="text" placeholder="Newyork">
+            <button class="radius-100"><img class="radius-100"
+                    src="https://static-00.iconduck.com/assets.00/search-icon-2044x2048-psdrpqwp.png"
+                    alt="search icon"></button>
+        </div>
+        <div id="second">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100" fill="orange">
+                <circle cx="12" cy="12" r="5" fill="yellow" />
+                <g stroke="orange" stroke-width="2" stroke-linecap="round">
+                    <line x1="12" y1="2" x2="12" y2="6" />
+                    <line x1="12" y1="18" x2="12" y2="22" />
+                    <line x1="2" y1="12" x2="6" y2="12" />
+                    <line x1="18" y1="12" x2="22" y2="12" />
+                    <line x1="4" y1="4" x2="7" y2="7" />
+                    <line x1="17" y1="17" x2="20" y2="20" />
+                    <line x1="4" y1="20" x2="7" y2="17" />
+                    <line x1="17" y1="7" x2="20" y2="4" />
+                </g>
+            </svg>
+
+        </div>
+        <div id="third">
+            <h1>7 °C</h1>
+            <p>Newyork</p>
+        </div>
+        <div id="fourth">
+            <div id="fourth-top">
+                <div id="fourth-top-first">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="100" height="100" fill="white">
+                        <!-- Water Drop -->
+                        <path
+                            d="M12 2C12 2 5 9 5 14C5 18.42 8.58 22 12 22C15.42 22 19 18.42 19 14C19 9 12 2 12 2ZM12 20C9.24 20 7 17.76 7 15C7 11.72 10.73 6.84 12 5.3C13.27 6.84 17 11.72 17 15C17 17.76 14.76 20 12 20Z" />
+                        <!-- Drop Reflection -->
+                        <circle cx="12" cy="16" r="1" fill="white" />
+                    </svg>
+                    <p>48%</p>
+                </div>
+
+                <div id="fourth-top-second">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="48" height="48" fill="white">
+                        <path
+                            d="M3 10h12a3 3 0 1 0-3-3h2a1 1 0 1 1 1-1 1 1 0 0 1-1 1H3v2zm0 4h17a2 2 0 1 0-2-2h2a4 4 0 1 1-4 4H3v-2zm12 4a2 2 0 1 1 2 2h-2a4 4 0 1 0 4-4h-2a2 2 0 0 1-2 2z" />
+                    </svg>
+                    <p>10.29 km/hr</p>
+                </div>
+            </div>
+            <div id="fourth-bottom">
+                <div></div>
+                <p>Humidity</p>
+                <p>Wind</p>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
